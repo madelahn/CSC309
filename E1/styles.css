@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --bg: #fdeec7;
+    --text: #1c1815;
+    --a1: #f69fc2;
+    --a2: #341292;
+    --a3: #bcd871;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    color: var(--text);
+    margin: 0;
+    background-color: #faf8f3;
+}
+
+header {
+    text-align: center;
+    background-color: var(--bg);
+    border: 1px var(--text) solid;
+    padding: 0 0 4rem;
+    margin: 3vw 5vw;
+}
+
+h1 {
+    padding: 0;
+    text-align: center;
+    font-size: 3rem;
+    color: var(--a2);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+nav, a {
+    padding: 0 1rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+nav a {
+    border: 1px var(--a2) solid;
+    background-color: var(--a3);
+    padding: 0.5rem 1.5rem;
+    border-radius: 1rem;
+}
+
+nav a:hover, p a:hover {
+    color: var(--a2);
+    transition: 0.1s ease-out;
+}
+
+section {
+    padding: 0 0 1rem;
+    margin: 2vw 5vw;
+    background-color: var(--bg);
+    border: 1px var(--text) solid;
+}
+
+section p {
+    padding: 0 1.25rem;
+    font-size: 1.25rem;
+    
+}
+
+.top {
+    background-color: var(--a1);
+    margin: 0; padding: 0.5rem;
+    border-bottom: 1px var(--text) solid;
+}
+
+h2 {
+    text-align: start;
+    padding-left: 1rem;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+    margin: 1.5rem 1rem;
+}
+
+li {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--text);
+    border: 1px var(--text) solid;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background-color: var(--a3);
+    margin: 0 2rem;
+}
+
+#contact p {
+   text-align: center; 
+}
+
+input {
+    max-width: 15vw;
+}
+
+input, textarea {
+    font-size: 1.25rem;
+    font-family: 'Red Hat Display', sans-serif;
+    padding: 0.5rem;
+    margin: 0.25rem 0rem;
+}
+
+.form {
+    margin-top: 2.5rem;
+    padding: 0;
+}
+
+.form-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.message {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+button {
+    background-color: var(--a3);
+    padding: 1rem;
+    border: 1px var(--text) solid;
+    border-radius: 1rem;
+    width: 10vw;
+    font-size: 1.25rem;
+    cursor: pointer;
+    margin: 1rem;
+}
+
+label {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+}
+
+#name {
+    width: 15vw;
+}
+
+#email {
+    width: 20vw;
+}
+
+.info {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    border: 1px var(--text) solid;
+    padding: 1rem;
+    margin: 1vw 5vw;
+    text-align: center;
+    background-color: var(--bg);
+}

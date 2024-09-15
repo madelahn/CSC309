@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="top"><h2>CSC309 Exercise 1</h2></div>
+        <h1>Madeline Ahn</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <div class="top" style="background: var(--a2);"><h2 style="color: white;">About Me</h2></div>
+        <p>
+            Hello! My name is Madeline, I'm a fourth-year student studying Computer Science, Statistics, and Digital Humanities.
+            I'm hoping to pursue cybersecurity as a career in the future, and I currently help with the school's IT department!
+        </p>
+        <p>
+            I've made a couple websites before, but only ever with HTML/CSS and JavaScript + jQuery. I'm excited to learn about the different
+            frameworks we'll be using in this course!
+        </p>
+    </section>
+
+    <section id="hobbies">
+        <div class="top"><h2>Hobbies</h2></div>
+        <ul>
+            <li><b>Keyboards - </b> Very expensive, but looks and feels nice!</li>
+            <li><b>Magic: The Gathering - </b> Also very expensive but looks and feels nice!</li>
+            <li><b>Drawing - </b> I thought about going into illustration/architecture instead of computer science...</li>
+            <li><b>Finding New Music - </b> I try to listen to at least 10 new artists per year.</li>
+            <li><b>Video games - </b> I used to be team captain on an Overwatch eSports team!</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <div class="email">
+            <div class="top" style="background: var(--a2); color: white;"><h2>Contact</h2></div>
+            <p>Feel free to contact me at:
+                <br><br><a href="mailto:madeline.ahn@mail.utoronto.ca">madeline.ahn@mail.utoronto.ca</a>
+                <br><br>
+                You can also fill out the form below to send a message (not real).
+            </p>
+        </div>
+
+        <div class="form">
+            <div class="form-input">
+                <div class="info">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Name"></input>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Email"></input>
+                </div>
+
+                <div class="message">
+                    <label for="message">Message: </label>
+                    <textarea type="text" id="textarea" rows="4" cols="40" placeholder="Type here"></textarea>
+                </div>
+
+                <button onClick="alert('HELP');">Send</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        &copy 2024 Madeline Ahn
+    </footer>
+</body>
+</html>
