@@ -1,5 +1,6 @@
 function flattenArray(nestedArray) {
   var ret = []
+
   nestedArray.forEach((item) => {
     if (Array.isArray(item)) {
       ret = ret.concat(flattenArray(item));
@@ -44,16 +45,38 @@ function memoize(fn) {
 
 
 function sumNestedValues(obj) {
-
+  var total = 0;
+  
+  Object.entries(obj).forEach(([key, value]) => {
+      if (typeof(value) === "number") {
+          total += value;
+      } else {
+          total = total + sumNestedValues(value);
+      }
+  })
+  return total;
 }
 
 
 function paginateArray(arr, pageSize, pageNumber) {
+  var ret = [];
 
+  return ret;
 }
 
 
 class EventEmitter {
+  event;
+  handler;
+
+  on(event, handler) {
+
+  }
+
+  emit(event, data) {
+
+  }
+
 
 }
 
