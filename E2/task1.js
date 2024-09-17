@@ -4,7 +4,7 @@ function flattenArray(nestedArray) {
   nestedArray.forEach((item) => {
     if (Array.isArray(item)) {
       ret = ret.concat(flattenArray(item));
-    } else {
+    } else {  // flatten current item's arary(s)
       ret.push(item);
     }
   })
@@ -18,9 +18,11 @@ function groupBy(arr, property) {
 
   arr.forEach((item) => {
       if (!groups.includes(item[property])) {
-          groups.push(item[property])
-          ret[item[property]] = [item];
+        // add new property to map
+        groups.push(item[property])
+        ret[item[property]] = [item];
       } else {
+        // add item to property
          ret[item[property]].push(item);
       }
   })
@@ -50,7 +52,7 @@ function sumNestedValues(obj) {
   Object.entries(obj).forEach(([key, value]) => {
       if (typeof(value) === "number") {
           total += value;
-      } else {
+      } else {  // recurse
           total = total + sumNestedValues(value);
       }
   })
@@ -59,30 +61,56 @@ function sumNestedValues(obj) {
 
 
 function paginateArray(arr, pageSize, pageNumber) {
-  var ret = [];
-
-  return ret;
+  var start = (pageNumber - 1) * pageSize;
+  if (start >= arr.length || pageNumber < 1) {  // out of bounds
+      return [];
+  } else {
+      // slice array for desired pages
+      return arr.slice(start, start + pageSize);
+  }
 }
 
 
 class EventEmitter {
-  event;
-  handler;
+  constructor() {
+    this.events = {};
+  }
 
   on(event, handler) {
-
+    // create event
+    if (!this.events[event]) {
+      this.events[event] = [];
+    }
+    // add handler to event
+    this.events[event].push(handler);
   }
 
   emit(event, data) {
-
+    if (this.events[event]) {
+      // complete each handler function given the data and event
+      this.events[event].forEach(handler => handler(data));
+    }
   }
-
-
 }
 
 
 function firstNonRepeatingChar(str) {
-
+  if (str.length == 0) return null;
+  const counts = {};
+  
+  // Count each char
+  for (var i=0; i < str.length; i++) {
+      var char = str[i];
+      counts[char] = (counts[char] || 0) + 1;  // If count[char] = undefined, set 0.
+  }
+  
+  // Iter thru map
+  for (var i=0; i < str.length; i++) {
+      if (counts[str[i]] == 1) {
+          return str[i];
+      }
+  }
+  return null;
 }
 
 
